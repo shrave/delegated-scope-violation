@@ -18,7 +18,7 @@ Steps (each prints a section; everything is written to reproduce/out/):
        Claude 5.5 crossings, grounds  logs + scripts/recent_claude_refusal_audit.py
        CI/CD full-grid defense        scripts/defense_002_measures.py
   3. STATISTICS. Wilson 95% intervals and two-sided Fisher exact tests,
-     Holm-corrected over the eleven-contrast family below.
+     Holm-corrected over the paper's nine-contrast family.
   4. FIGURES. factorial.pdf, generational.pdf, r1_harm.pdf, drawn from the
      recomputed counts (never typed in).
   5. CHECK. Every recomputed value is compared with the value printed in the
@@ -259,14 +259,16 @@ def statistics(r2: dict[str, Any], r1: dict[str, Any], gradient: dict[str, Any],
         v = r1["cells"][f"{m}/{a}"]
         return v["peer_missed"], v["n"]
 
-    # THE ELEVEN-CONTRAST FAMILY. The paper enumerates only some members
-    # (Table "Key contrasts"); this family reproduces every printed Holm value.
+    # THE NINE-CONTRAST HOLM FAMILY, as enumerated in the paper (Table
+    # "Key contrasts" and its caption): competition and payoff per model, the
+    # R1 none-vs-hard peer-miss reduction for the two models that show the
+    # channel (GLM-5 has 0 misses in every arm), and the model-refusal contrast.
     fam: dict[str, tuple[tuple[int, int], tuple[int, int]]] = {}
     for m in MODELS:
         fam[f"competition | listed, unstated [{m}]"] = (cell2(m, "comp_listed_unstated"), cell2(m, "ind_listed_unstated"))
         fam[f"payoff | competitive, listed [{m}]"] = (cell2(m, "comp_listed_stated"), cell2(m, "comp_listed_unstated"))
+    for m in ("sonnet", "deepseek"):
         fam[f"R1 none vs hard, peer miss [{m}]"] = (miss(m, "none"), miss(m, "hard"))
-    fam["payoff | independent, listed [deepseek]"] = (cell2("deepseek", "ind_listed_stated"), cell2("deepseek", "ind_listed_unstated"))
     s45 = (gradient["sonnet/effect_stated"], 10)
     s55 = (c55["cells"]["sonnet55/soc_v2_effect_stated"]["crossing_eps"], c55["cells"]["sonnet55/soc_v2_effect_stated"]["n"])
     fam["model refusal, effect-stated SOC [Sonnet 4.5 vs Sonnet 5.5]"] = (s45, s55)

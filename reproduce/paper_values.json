@@ -1378,7 +1378,7 @@
     "competition | listed, unstated [glm]",
     "p_holm"
    ],
-   "paper": 0.11,
+   "paper": 0.054,
    "round_sig": 2
   },
   {
@@ -1389,8 +1389,8 @@
     "competition | listed, unstated [sonnet]",
     "p_holm"
    ],
-   "paper": 2e-06,
-   "round_sig": 1
+   "paper": 1.4e-06,
+   "round_sig": 2
   },
   {
    "claim": "Tab. stats Holm p: competition | listed, unstated [deepseek]",
@@ -1400,7 +1400,7 @@
     "competition | listed, unstated [deepseek]",
     "p_holm"
    ],
-   "paper": 0.49,
+   "paper": 0.24,
    "round_sig": 2
   },
   {
@@ -1411,7 +1411,7 @@
     "payoff | competitive, listed [glm]",
     "p_holm"
    ],
-   "paper": 0.048,
+   "paper": 0.029,
    "round_sig": 2
   },
   {
@@ -1422,7 +1422,7 @@
     "payoff | competitive, listed [sonnet]",
     "p_holm"
    ],
-   "paper": 4e-12,
+   "paper": 3e-12,
    "round_sig": 1
   },
   {
@@ -1433,7 +1433,7 @@
     "payoff | competitive, listed [deepseek]",
     "p_holm"
    ],
-   "paper": 9e-20,
+   "paper": 7e-20,
    "round_sig": 1
   },
   {
@@ -1444,8 +1444,8 @@
     "R1 none vs hard, peer miss [sonnet]",
     "p_holm"
    ],
-   "paper": 0.0001,
-   "round_sig": 1
+   "paper": 7.3e-05,
+   "round_sig": 2
   },
   {
    "claim": "Tab. stats Holm p: R1 none vs hard, peer miss [deepseek]",
@@ -1455,8 +1455,8 @@
     "R1 none vs hard, peer miss [deepseek]",
     "p_holm"
    ],
-   "paper": 0.0002,
-   "round_sig": 1
+   "paper": 0.00015,
+   "round_sig": 2
   },
   {
    "claim": "Tab. stats Holm p: model refusal, effect-stated SOC [Sonnet 4.5 vs Sonnet 5.5]",
@@ -1466,8 +1466,8 @@
     "model refusal, effect-stated SOC [Sonnet 4.5 vs Sonnet 5.5]",
     "p_holm"
    ],
-   "paper": 0.0007,
-   "round_sig": 1
+   "paper": 0.00048,
+   "round_sig": 2
   },
   {
    "claim": "Wilson 95% CI, Sonnet 4.5 comp/listed/stated 52/52 = [93,100]%",
@@ -1535,7 +1535,7 @@
    "paper": 396
   },
   {
-   "claim": "Mechanism (CI/CD): crossings citing the reward formula or relative standing (was printed as 28-29/39; re-derived)",
+   "claim": "Mechanism (CI/CD): crossings citing the reward formula or relative standing",
    "path": [
     "cicd_formula_citation",
     "total",
@@ -1603,7 +1603,7 @@
   }
  ],
  "not_reproducible": [
-  "Mechanism (CI/CD): the paper's earlier '28-29/39' had no script and no identifiable crossing set; it is superseded by the re-derived count checked above (scripts/cicd_formula_citation.py). The paper text must print the re-derived value for this check to describe it.",
-  "Tab. stats: the paper enumerates 9 of the 11 Holm-family contrasts; the family used here (reproduce_all.statistics) reproduces every printed value."
+  "Provenance: whether any crashed attempt deleted by the original lane runner (R1/R2: 50 slots; defense-002: 30 retries) had already crossed cannot be recovered; the paper discloses this.",
+  "Defense generalisation: the judge's decisions on the constructed SOC redirect came from a live gate call (scripts/defense_soc_redirect_gap_demo.py, Tier 2); its summary is in docs/defense_002_results.md."
  ]
 }
