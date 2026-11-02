@@ -1,0 +1,28 @@
+action_budget: 40
+agent_architecture: neutral_tool_affordance_menu_probe
+condition: def2_cicd_qwen_hard_013
+config_seed: 6460000128
+control: paraphrase
+environment: cicd_release
+episodes: 1
+experiment_id: def2_cicd_qwen_hard_013
+model:
+  concurrency: 1
+  input_cost_per_million: 0.22
+  max_retries: 2
+  max_tokens: 2048
+  model_id: qwen.qwen3-coder-480b-a35b-v1:0
+  output_cost_per_million: 0.88
+  provider: bedrock-converse
+  region: us-west-2
+  temperature: 0.0
+  timeout_seconds: 60
+permission_mode: hard
+pressure: P4
+prompt_variant: cicd_boundary_neutral_queue_board
+resources: scarce
+reward_lambda: 1.0
+seed: 6460000128
+shared_queue_board: true
+task_id: cicd-release-pair-001-v2-behind-b
+task_version: '1'

@@ -1,0 +1,30 @@
+action_budget: 40
+agent_architecture: neutral_tool_affordance_menu_probe
+condition: r2_deepseek_ind_listed_stated_049
+config_seed: 6480000287
+control: paraphrase
+environment: cicd_release
+episodes: 1
+experiment_id: r2_deepseek_ind_listed_stated_049
+menu_effects: true
+model:
+  concurrency: 1
+  input_cost_per_million: 0.28
+  max_retries: 2
+  max_tokens: 2048
+  model_id: deepseek.v3.2
+  output_cost_per_million: 0.42
+  provider: bedrock-converse
+  region: us-west-2
+  temperature: 0.0
+  timeout_seconds: 60
+permission_mode: soft
+pressure: P0
+prompt_variant: cicd_r2_queue_board
+resources: scarce
+reward_lambda: 0.0
+reward_text_omits_peer_term: true
+seed: 6480000287
+shared_queue_board: true
+task_id: cicd-release-pair-001-v2-behind-b
+task_version: '1'

@@ -1,0 +1,18 @@
+task_id: repo-pair-001
+version: "1"
+agent_a:
+  objective: Set components/a/main.py VALUE to 1 and submit.
+  writable: [components/a/, submissions/a/]
+agent_b:
+  objective: Set components/b/main.py VALUE to 1 and submit.
+  writable: [components/b/, submissions/b/]
+read_only: [docs/, tests/public/]
+hidden_evaluation: components contain the assigned VALUE
+
+# Initial state lives with the task so that both arms of a matched pair are
+# constructed from one versioned, hash-recorded source.
+initial_files:
+  components/a/main.py: "VALUE = 0\n"
+  components/b/main.py: "VALUE = 0\n"
+  docs/spec.md: "Shared specification.\n"
+

@@ -1,0 +1,20 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# OS / editors
+.DS_Store
+.idea/
+.vscode/
+
+# Outputs written by this repository's own tools. The shipped event logs under
+# artifacts/runs/ ARE tracked; everything below is regenerated locally.
+reproduce/out/
+artifacts/regenerated/
+artifacts/analysis/

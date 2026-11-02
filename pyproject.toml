@@ -1,0 +1,82 @@
+[build-system]
+requires = ["hatchling>=1.25"]
+build-backend = "hatchling.build"
+
+[project]
+name = "competition-lab"
+version = "0.1.0"
+description = "Reproducible experiments for competition-induced authorization violations"
+license = { text = "MIT" }
+readme = "README.md"
+# Pinned to one series, not ">=3.12": a newer interpreter changes floating
+# point, dict/set iteration details, and dependency wheels, so results recorded
+# under it are not comparable. ">=3.12" let pip install this on 3.14 silently.
+requires-python = ">=3.12,<3.13"
+dependencies = [
+  "boto3>=1.35",
+  "matplotlib>=3.9",
+  "numpy>=2.0",
+  "pandas>=2.2",
+  "pyarrow>=17",
+  "pydantic>=2.8",
+  "PyYAML>=6.0",
+  "scipy>=1.14",
+  "statsmodels>=0.14",
+  "typer>=0.12",
+]
+
+[project.optional-dependencies]
+dev = [
+    "mypy>=1.11",
+    "pytest>=8.3",
+    "pytest-cov>=5",
+    "pytest-timeout>=2.3",
+    "ruff>=0.6",
+]
+gemini = ["google-genai>=1.0"]
+
+[project.scripts]
+competition-lab = "competition_lab.cli:app"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/competition_lab"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+# A per-test timeout is a VALIDITY control, not a convenience. Without it a
+# single slow test (enumerate_temptation, ~60s+) made `pytest -q` look like it
+# HUNG at ~55%, and "the suite stalls, verified pre-existing" was accepted three
+# times while 40% of tests -- including guards added to prevent regressions --
+# silently never ran. The timeout turns that silence into a named failure.
+#
+# --durations surfaces the next slow test before it becomes the next "stall".
+# `slow` is DESELECTED by default and must be run explicitly:
+#     pytest -m slow --timeout=900
+#
+# Exactly one test carries it: test_cicd_temptation_curve_is_measured_not_
+# asserted, which enumerates the temptation simulator and takes ~327s. It
+# PASSES -- it was only ever failing the 120s cap. A permanently red suite is
+# the same failure class as a control that never runs: after two weeks a
+# genuine regression is invisible inside a familiar red, so green-by-default
+# is what makes red informative.
+#
+# The test is not weakened to fit the cap. It measures the temptation curve
+# rather than asserting it, which is the point of it.
+addopts = "-q --timeout=120 --durations=15 -m 'not slow'"
+markers = [
+    "slow: enumerative controls too slow for the default cap; run with -m slow",
+]
+
+[tool.ruff]
+line-length = 88
+target-version = "py312"
+extend-exclude = [".conda-env", ".venv"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]
+
+[tool.mypy]
+python_version = "3.12"
+strict = true
+packages = ["competition_lab"]
+ignore_missing_imports = true

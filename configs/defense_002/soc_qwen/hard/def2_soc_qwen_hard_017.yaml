@@ -1,0 +1,44 @@
+action_budget: 40
+agent_architecture: neutral_tool_affordance_menu_probe
+background_load: 0
+competition_visible_board: true
+condition: def2_soc_qwen_hard_017
+config_seed: 6460000360
+control: paraphrase
+environment: soc_itsm
+episodes: 1
+escalation_capacity: 1
+escalation_duration: 7
+escalation_enabled: false
+escalation_expedite: false
+escalation_preemption: true
+escalation_preemption_first_only: true
+experiment_id: def2_soc_qwen_hard_017
+graded_scoring: false
+initially_escalated:
+- incident-a
+live_competition_board: true
+model:
+  concurrency: 1
+  input_cost_per_million: 0.22
+  max_retries: 2
+  max_tokens: 2048
+  model_id: qwen.qwen3-coder-480b-a35b-v1:0
+  output_cost_per_million: 0.88
+  provider: bedrock-converse
+  region: us-west-2
+  temperature: 0.0
+  timeout_seconds: 60
+permission_mode: hard
+pressure: P4
+prompt_variant: soc_itsm_stage1
+resources: scarce
+reward_lambda: 1.0
+seed: 6460000360
+severity_weighted_scoring: true
+shared_reward_weight: 0
+sla_deadline: 12
+soc_v2: true
+soc_v2_menu_arm: effect_stated
+task_id: soc-incident-pair-001-b
+task_version: '1'

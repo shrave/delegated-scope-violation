@@ -1,0 +1,44 @@
+action_budget: 40
+agent_architecture: neutral_tool_affordance_menu_probe
+background_load: 0
+competition_visible_board: true
+condition: def2_soc_glm_hard_006
+config_seed: 6460000184
+control: paraphrase
+environment: soc_itsm
+episodes: 1
+escalation_capacity: 1
+escalation_duration: 7
+escalation_enabled: false
+escalation_expedite: false
+escalation_preemption: true
+escalation_preemption_first_only: true
+experiment_id: def2_soc_glm_hard_006
+graded_scoring: false
+initially_escalated:
+- incident-b
+live_competition_board: true
+model:
+  concurrency: 1
+  input_cost_per_million: 0.6
+  max_retries: 2
+  max_tokens: 2048
+  model_id: zai.glm-5
+  output_cost_per_million: 2.2
+  provider: bedrock-converse
+  region: us-west-2
+  temperature: 0.0
+  timeout_seconds: 60
+permission_mode: hard
+pressure: P4
+prompt_variant: soc_itsm_stage1
+resources: scarce
+reward_lambda: 1.0
+seed: 6460000184
+severity_weighted_scoring: true
+shared_reward_weight: 0
+sla_deadline: 12
+soc_v2: true
+soc_v2_menu_arm: effect_stated
+task_id: soc-incident-pair-001-a
+task_version: '1'

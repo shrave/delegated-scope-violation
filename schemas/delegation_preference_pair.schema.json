@@ -1,0 +1,114 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/shrave/delegated-scope-violation/schemas/delegation_preference_pair.schema.json",
+  "title": "Delegation Preference Pair",
+  "description": "One DPO-style preference pair for delegation-aware alignment. The rejected side is a state-changing action on another agent's assigned resource that the platform PERMITS but delegation does not cover; the chosen side is an in-scope alternative. Labels are derived from the environment/detector, never from an LLM judge. SCHEMA STUB ONLY -- no dataset has been generated.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id", "domain", "arm", "actor", "focal_side", "assigned_resources",
+    "visible_peer_resources", "technical_role", "reward_context",
+    "context_prompt", "chosen", "rejected", "label_reason", "source",
+    "verification_status"
+  ],
+  "properties": {
+    "id": {"type": "string", "description": "Stable unique id."},
+    "domain": {"enum": ["cicd", "soc_itsm"]},
+    "arm": {"enum": ["p0", "p4", "team", "highstakes"]},
+    "actor": {"enum": ["A", "B"]},
+    "focal_side": {"enum": ["a", "b"]},
+    "assigned_resources": {
+      "type": "array", "items": {"type": "string"},
+      "description": "Resource ids delegated to this actor, from delegation.assignments."
+    },
+    "visible_peer_resources": {
+      "type": "array", "items": {"type": "string"},
+      "description": "Resource ids visible to the actor but assigned elsewhere."
+    },
+    "technical_role": {
+      "type": "string",
+      "description": "Platform role, e.g. project_maintainer. Confers ACL permission, NOT delegated authority -- the distinction this dataset teaches."
+    },
+    "reward_context": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["formula", "reward_lambda", "shared_reward_weight"],
+      "properties": {
+        "formula": {"type": "string"},
+        "reward_lambda": {"type": "number"},
+        "shared_reward_weight": {"type": "number"},
+        "current_scores": {"type": "object", "additionalProperties": {"type": "number"}},
+        "projected_scores": {"type": "object", "additionalProperties": {"type": "number"}}
+      }
+    },
+    "context_prompt": {"type": "string", "description": "Serialized state shown to the agent."},
+    "action_menu": {
+      "type": ["array", "null"],
+      "items": {"type": "string"},
+      "description": "Affordance menu if one was presented, else null. Experiment 2B showed an enumerated peer candidate is close to sufficient to induce the violation, so menu presence is a first-class field."
+    },
+    "chosen": {"$ref": "#/$defs/side"},
+    "rejected": {"$ref": "#/$defs/side"},
+    "rejected_motive_class": {
+      "enum": ["competitive", "helpful_shared", "contention", "none", "uncodeable"],
+      "description": "Why the unsafe action was taken, from the agent's own text where available. Three behaviourally distinct sub-cases were observed; a single 'unsafe' label lets training key on competitive phrasing and miss the others. Never inferred without supporting text -- use 'uncodeable' instead."
+    },
+    "peer_impact_direction": {
+      "enum": ["harmful", "helpful", "neutral", "unknown"],
+      "description": "Measured effect on the peer. Recorded SEPARATELY from motive and never summed with it."
+    },
+    "is_counterfactual_pair": {
+      "type": "boolean",
+      "description": "True when chosen and rejected come from the same episode state (a real counterfactual); false when the chosen side is synthesised."
+    },
+    "label_reason": {
+      "type": "string",
+      "description": "Which delegation proposition the pair teaches, e.g. 'technical permission is not delegated authority'."
+    },
+    "source": {"enum": ["human_seed", "synthetic", "mined_log"]},
+    "provenance": {
+      "type": "object",
+      "additionalProperties": false,
+      "description": "Required when source is mined_log, so any row is traceable to a hash-chained artifact.",
+      "properties": {
+        "run": {"type": "string"},
+        "episode_id": {"type": "string"},
+        "event_id": {"type": "string"},
+        "turn": {"type": "integer"}
+      }
+    },
+    "verification_status": {
+      "enum": ["detector_verified", "manually_verified", "needs_review"],
+      "description": "needs_review rows are quarantined from training."
+    },
+    "split": {"enum": ["train", "dev", "test"]}
+  },
+  "$defs": {
+    "side": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["action_text", "action_type", "within_delegation"],
+      "properties": {
+        "action_text": {"type": "string", "description": "The response/tool call as the model would emit it."},
+        "rationale": {"type": ["string", "null"], "description": "Short natural-language justification, if available."},
+        "action_type": {
+          "enum": [
+            "own_resource_mutation", "peer_resource_mutation",
+            "delegated_cross_resource_mutation", "shared_system_mutation",
+            "peer_read_only", "own_read_only",
+            "notify_peer", "request_delegation", "escalate",
+            "continue_own_work", "wait_no_op", "submit_final"
+          ]
+        },
+        "target_resource": {"type": ["string", "null"]},
+        "target_owner": {"type": ["string", "null"], "description": "Declared owner from delegation.assignments, never inferred from the resource id."},
+        "within_delegation": {"type": "boolean"},
+        "technical_permission": {
+          "enum": ["permitted", "denied", "not_applicable"],
+          "description": "For the rejected side this is typically 'permitted' -- that gap is the phenomenon."
+        },
+        "would_change_state": {"type": "boolean"}
+      }
+    }
+  }
+}

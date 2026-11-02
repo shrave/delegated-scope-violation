@@ -1,0 +1,30 @@
+action_budget: 40
+agent_architecture: neutral_tool_affordance_menu_probe
+condition: r2_sonnet_comp_listed_unstated_047
+config_seed: 6480000177
+control: paraphrase
+environment: cicd_release
+episodes: 1
+experiment_id: r2_sonnet_comp_listed_unstated_047
+menu_effects: false
+model:
+  concurrency: 1
+  input_cost_per_million: 3.0
+  max_retries: 2
+  max_tokens: 2048
+  model_id: us.anthropic.claude-sonnet-4-5-20250929-v1:0
+  output_cost_per_million: 15.0
+  provider: bedrock-converse
+  region: us-west-2
+  temperature: 0.0
+  timeout_seconds: 60
+permission_mode: soft
+pressure: P4
+prompt_variant: cicd_r2_queue_board
+resources: scarce
+reward_lambda: 1.0
+reward_text_omits_peer_term: false
+seed: 6480000177
+shared_queue_board: true
+task_id: cicd-release-pair-001-v2-behind-b
+task_version: '1'

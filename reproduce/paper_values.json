@@ -1,0 +1,1533 @@
+{
+ "_about": "Values printed in the paper, checked by reproduce/reproduce_all.py against values recomputed from the event logs. 'path' is the key path into reproduce/out/results.json.",
+ "checks": [
+  {
+   "claim": "replay divergences, r2-affordance-factorial-001 (Methods: zero classification divergences)",
+   "path": [
+    "replay",
+    "r2-affordance-factorial-001",
+    "divergences"
+   ],
+   "paper": 0
+  },
+  {
+   "claim": "replay divergences, r1-soc-repair-001 (Methods: zero classification divergences)",
+   "path": [
+    "replay",
+    "r1-soc-repair-001",
+    "divergences"
+   ],
+   "paper": 0
+  },
+  {
+   "claim": "replay divergences, soc-v2-affordance-diagnostic-001 (Methods: zero classification divergences)",
+   "path": [
+    "replay",
+    "soc-v2-affordance-diagnostic-001",
+    "divergences"
+   ],
+   "paper": 0
+  },
+  {
+   "claim": "replay divergences, soc-v2-affordance-diagnostic-002 (Methods: zero classification divergences)",
+   "path": [
+    "replay",
+    "soc-v2-affordance-diagnostic-002",
+    "divergences"
+   ],
+   "paper": 0
+  },
+  {
+   "claim": "replay divergences, recent-claude-matched-001 (Methods: zero classification divergences)",
+   "path": [
+    "replay",
+    "recent-claude-matched-001",
+    "divergences"
+   ],
+   "paper": 0
+  },
+  {
+   "claim": "replay divergences, defense-001 (Methods: zero classification divergences)",
+   "path": [
+    "replay",
+    "defense-001",
+    "divergences"
+   ],
+   "paper": 0
+  },
+  {
+   "claim": "replay divergences, defense-002 (Methods: zero classification divergences)",
+   "path": [
+    "replay",
+    "defense-002",
+    "divergences"
+   ],
+   "paper": 0
+  },
+  {
+   "claim": "Tab. factorial: glm ind_unlisted_unstated crossings of 52",
+   "path": [
+    "r2",
+    "cells",
+    "glm/ind_unlisted_unstated",
+    "crossing_eps"
+   ],
+   "paper": 0
+  },
+  {
+   "claim": "Tab. factorial: glm ind_unlisted_unstated n",
+   "path": [
+    "r2",
+    "cells",
+    "glm/ind_unlisted_unstated",
+    "n"
+   ],
+   "paper": 52
+  },
+  {
+   "claim": "Tab. factorial: glm ind_unlisted_stated crossings of 52",
+   "path": [
+    "r2",
+    "cells",
+    "glm/ind_unlisted_stated",
+    "crossing_eps"
+   ],
+   "paper": 0
+  },
+  {
+   "claim": "Tab. factorial: glm ind_unlisted_stated n",
+   "path": [
+    "r2",
+    "cells",
+    "glm/ind_unlisted_stated",
+    "n"
+   ],
+   "paper": 52
+  },
+  {
+   "claim": "Tab. factorial: glm ind_listed_unstated crossings of 52",
+   "path": [
+    "r2",
+    "cells",
+    "glm/ind_listed_unstated",
+    "crossing_eps"
+   ],
+   "paper": 0
+  },
+  {
+   "claim": "Tab. factorial: glm ind_listed_unstated n",
+   "path": [
+    "r2",
+    "cells",
+    "glm/ind_listed_unstated",
+    "n"
+   ],
+   "paper": 52
+  },
+  {
+   "claim": "Tab. factorial: glm ind_listed_stated crossings of 52",
+   "path": [
+    "r2",
+    "cells",
+    "glm/ind_listed_stated",
+    "crossing_eps"
+   ],
+   "paper": 0
+  },
+  {
+   "claim": "Tab. factorial: glm ind_listed_stated n",
+   "path": [
+    "r2",
+    "cells",
+    "glm/ind_listed_stated",
+    "n"
+   ],
+   "paper": 52
+  },
+  {
+   "claim": "Tab. factorial: glm comp_unlisted_unstated crossings of 52",
+   "path": [
+    "r2",
+    "cells",
+    "glm/comp_unlisted_unstated",
+    "crossing_eps"
+   ],
+   "paper": 0
+  },
+  {
+   "claim": "Tab. factorial: glm comp_unlisted_unstated n",
+   "path": [
+    "r2",
+    "cells",
+    "glm/comp_unlisted_unstated",
+    "n"
+   ],
+   "paper": 52
+  },
+  {
+   "claim": "Tab. factorial: glm comp_unlisted_stated crossings of 52",
+   "path": [
+    "r2",
+    "cells",
+    "glm/comp_unlisted_stated",
+    "crossing_eps"
+   ],
+   "paper": 0
+  },
+  {
+   "claim": "Tab. factorial: glm comp_unlisted_stated n",
+   "path": [
+    "r2",
+    "cells",
+    "glm/comp_unlisted_stated",
+    "n"
+   ],
+   "paper": 52
+  },
+  {
+   "claim": "Tab. factorial: glm comp_listed_unstated crossings of 52",
+   "path": [
+    "r2",
+    "cells",
+    "glm/comp_listed_unstated",
+    "crossing_eps"
+   ],
+   "paper": 6
+  },
+  {
+   "claim": "Tab. factorial: glm comp_listed_unstated n",
+   "path": [
+    "r2",
+    "cells",
+    "glm/comp_listed_unstated",
+    "n"
+   ],
+   "paper": 52
+  },
+  {
+   "claim": "Tab. factorial: glm comp_listed_stated crossings of 52",
+   "path": [
+    "r2",
+    "cells",
+    "glm/comp_listed_stated",
+    "crossing_eps"
+   ],
+   "paper": 18
+  },
+  {
+   "claim": "Tab. factorial: glm comp_listed_stated n",
+   "path": [
+    "r2",
+    "cells",
+    "glm/comp_listed_stated",
+    "n"
+   ],
+   "paper": 52
+  },
+  {
+   "claim": "Tab. factorial: sonnet ind_unlisted_unstated crossings of 52",
+   "path": [
+    "r2",
+    "cells",
+    "sonnet/ind_unlisted_unstated",
+    "crossing_eps"
+   ],
+   "paper": 0
+  },
+  {
+   "claim": "Tab. factorial: sonnet ind_unlisted_unstated n",
+   "path": [
+    "r2",
+    "cells",
+    "sonnet/ind_unlisted_unstated",
+    "n"
+   ],
+   "paper": 52
+  },
+  {
+   "claim": "Tab. factorial: sonnet ind_unlisted_stated crossings of 52",
+   "path": [
+    "r2",
+    "cells",
+    "sonnet/ind_unlisted_stated",
+    "crossing_eps"
+   ],
+   "paper": 0
+  },
+  {
+   "claim": "Tab. factorial: sonnet ind_unlisted_stated n",
+   "path": [
+    "r2",
+    "cells",
+    "sonnet/ind_unlisted_stated",
+    "n"
+   ],
+   "paper": 52
+  },
+  {
+   "claim": "Tab. factorial: sonnet ind_listed_unstated crossings of 52",
+   "path": [
+    "r2",
+    "cells",
+    "sonnet/ind_listed_unstated",
+    "crossing_eps"
+   ],
+   "paper": 0
+  },
+  {
+   "claim": "Tab. factorial: sonnet ind_listed_unstated n",
+   "path": [
+    "r2",
+    "cells",
+    "sonnet/ind_listed_unstated",
+    "n"
+   ],
+   "paper": 52
+  },
+  {
+   "claim": "Tab. factorial: sonnet ind_listed_stated crossings of 52",
+   "path": [
+    "r2",
+    "cells",
+    "sonnet/ind_listed_stated",
+    "crossing_eps"
+   ],
+   "paper": 3
+  },
+  {
+   "claim": "Tab. factorial: sonnet ind_listed_stated n",
+   "path": [
+    "r2",
+    "cells",
+    "sonnet/ind_listed_stated",
+    "n"
+   ],
+   "paper": 52
+  },
+  {
+   "claim": "Tab. factorial: sonnet comp_unlisted_unstated crossings of 52",
+   "path": [
+    "r2",
+    "cells",
+    "sonnet/comp_unlisted_unstated",
+    "crossing_eps"
+   ],
+   "paper": 0
+  },
+  {
+   "claim": "Tab. factorial: sonnet comp_unlisted_unstated n",
+   "path": [
+    "r2",
+    "cells",
+    "sonnet/comp_unlisted_unstated",
+    "n"
+   ],
+   "paper": 52
+  },
+  {
+   "claim": "Tab. factorial: sonnet comp_unlisted_stated crossings of 52",
+   "path": [
+    "r2",
+    "cells",
+    "sonnet/comp_unlisted_stated",
+    "crossing_eps"
+   ],
+   "paper": 0
+  },
+  {
+   "claim": "Tab. factorial: sonnet comp_unlisted_stated n",
+   "path": [
+    "r2",
+    "cells",
+    "sonnet/comp_unlisted_stated",
+    "n"
+   ],
+   "paper": 52
+  },
+  {
+   "claim": "Tab. factorial: sonnet comp_listed_unstated crossings of 52",
+   "path": [
+    "r2",
+    "cells",
+    "sonnet/comp_listed_unstated",
+    "crossing_eps"
+   ],
+   "paper": 20
+  },
+  {
+   "claim": "Tab. factorial: sonnet comp_listed_unstated n",
+   "path": [
+    "r2",
+    "cells",
+    "sonnet/comp_listed_unstated",
+    "n"
+   ],
+   "paper": 52
+  },
+  {
+   "claim": "Tab. factorial: sonnet comp_listed_stated crossings of 52",
+   "path": [
+    "r2",
+    "cells",
+    "sonnet/comp_listed_stated",
+    "crossing_eps"
+   ],
+   "paper": 52
+  },
+  {
+   "claim": "Tab. factorial: sonnet comp_listed_stated n",
+   "path": [
+    "r2",
+    "cells",
+    "sonnet/comp_listed_stated",
+    "n"
+   ],
+   "paper": 52
+  },
+  {
+   "claim": "Tab. factorial: deepseek ind_unlisted_unstated crossings of 52",
+   "path": [
+    "r2",
+    "cells",
+    "deepseek/ind_unlisted_unstated",
+    "crossing_eps"
+   ],
+   "paper": 0
+  },
+  {
+   "claim": "Tab. factorial: deepseek ind_unlisted_unstated n",
+   "path": [
+    "r2",
+    "cells",
+    "deepseek/ind_unlisted_unstated",
+    "n"
+   ],
+   "paper": 52
+  },
+  {
+   "claim": "Tab. factorial: deepseek ind_unlisted_stated crossings of 52",
+   "path": [
+    "r2",
+    "cells",
+    "deepseek/ind_unlisted_stated",
+    "crossing_eps"
+   ],
+   "paper": 0
+  },
+  {
+   "claim": "Tab. factorial: deepseek ind_unlisted_stated n",
+   "path": [
+    "r2",
+    "cells",
+    "deepseek/ind_unlisted_stated",
+    "n"
+   ],
+   "paper": 52
+  },
+  {
+   "claim": "Tab. factorial: deepseek ind_listed_unstated crossings of 52",
+   "path": [
+    "r2",
+    "cells",
+    "deepseek/ind_listed_unstated",
+    "crossing_eps"
+   ],
+   "paper": 0
+  },
+  {
+   "claim": "Tab. factorial: deepseek ind_listed_unstated n",
+   "path": [
+    "r2",
+    "cells",
+    "deepseek/ind_listed_unstated",
+    "n"
+   ],
+   "paper": 52
+  },
+  {
+   "claim": "Tab. factorial: deepseek ind_listed_stated crossings of 52",
+   "path": [
+    "r2",
+    "cells",
+    "deepseek/ind_listed_stated",
+    "crossing_eps"
+   ],
+   "paper": 6
+  },
+  {
+   "claim": "Tab. factorial: deepseek ind_listed_stated n",
+   "path": [
+    "r2",
+    "cells",
+    "deepseek/ind_listed_stated",
+    "n"
+   ],
+   "paper": 52
+  },
+  {
+   "claim": "Tab. factorial: deepseek comp_unlisted_unstated crossings of 52",
+   "path": [
+    "r2",
+    "cells",
+    "deepseek/comp_unlisted_unstated",
+    "crossing_eps"
+   ],
+   "paper": 0
+  },
+  {
+   "claim": "Tab. factorial: deepseek comp_unlisted_unstated n",
+   "path": [
+    "r2",
+    "cells",
+    "deepseek/comp_unlisted_unstated",
+    "n"
+   ],
+   "paper": 52
+  },
+  {
+   "claim": "Tab. factorial: deepseek comp_unlisted_stated crossings of 52",
+   "path": [
+    "r2",
+    "cells",
+    "deepseek/comp_unlisted_stated",
+    "crossing_eps"
+   ],
+   "paper": 0
+  },
+  {
+   "claim": "Tab. factorial: deepseek comp_unlisted_stated n",
+   "path": [
+    "r2",
+    "cells",
+    "deepseek/comp_unlisted_stated",
+    "n"
+   ],
+   "paper": 52
+  },
+  {
+   "claim": "Tab. factorial: deepseek comp_listed_unstated crossings of 52",
+   "path": [
+    "r2",
+    "cells",
+    "deepseek/comp_listed_unstated",
+    "crossing_eps"
+   ],
+   "paper": 3
+  },
+  {
+   "claim": "Tab. factorial: deepseek comp_listed_unstated n",
+   "path": [
+    "r2",
+    "cells",
+    "deepseek/comp_listed_unstated",
+    "n"
+   ],
+   "paper": 52
+  },
+  {
+   "claim": "Tab. factorial: deepseek comp_listed_stated crossings of 52",
+   "path": [
+    "r2",
+    "cells",
+    "deepseek/comp_listed_stated",
+    "crossing_eps"
+   ],
+   "paper": 48
+  },
+  {
+   "claim": "Tab. factorial: deepseek comp_listed_stated n",
+   "path": [
+    "r2",
+    "cells",
+    "deepseek/comp_listed_stated",
+    "n"
+   ],
+   "paper": 52
+  },
+  {
+   "claim": "R2: agent that starts behind completes its release (of 1,247)",
+   "path": [
+    "r2",
+    "focal_completed_total"
+   ],
+   "paper": 0
+  },
+  {
+   "claim": "R2: complete episodes",
+   "path": [
+    "r2",
+    "complete_episodes"
+   ],
+   "paper": 1247
+  },
+  {
+   "claim": "R2: GLM-5 empty text, ind/unlisted/unstated (28-35% claim, upper)",
+   "path": [
+    "r2",
+    "cells",
+    "glm/ind_unlisted_unstated",
+    "empty_text_pct"
+   ],
+   "paper": 35
+  },
+  {
+   "claim": "R2: GLM-5 empty text, comp/unlisted/unstated (28-35% claim, lower)",
+   "path": [
+    "r2",
+    "cells",
+    "glm/comp_unlisted_unstated",
+    "empty_text_pct"
+   ],
+   "paper": 28
+  },
+  {
+   "claim": "Tab. r1: glm none crossings of 40",
+   "path": [
+    "r1",
+    "cells",
+    "glm/none",
+    "crossing_eps"
+   ],
+   "paper": 3
+  },
+  {
+   "claim": "Tab. r1: glm none peer missed avoidable SLA",
+   "path": [
+    "r1",
+    "cells",
+    "glm/none",
+    "peer_missed"
+   ],
+   "paper": 0
+  },
+  {
+   "claim": "R1: glm none n",
+   "path": [
+    "r1",
+    "cells",
+    "glm/none",
+    "n"
+   ],
+   "paper": 40
+  },
+  {
+   "claim": "Tab. r1: glm hard crossings of 40",
+   "path": [
+    "r1",
+    "cells",
+    "glm/hard",
+    "crossing_eps"
+   ],
+   "paper": 0
+  },
+  {
+   "claim": "Tab. r1: glm hard peer missed avoidable SLA",
+   "path": [
+    "r1",
+    "cells",
+    "glm/hard",
+    "peer_missed"
+   ],
+   "paper": 0
+  },
+  {
+   "claim": "R1: glm hard n",
+   "path": [
+    "r1",
+    "cells",
+    "glm/hard",
+    "n"
+   ],
+   "paper": 40
+  },
+  {
+   "claim": "Tab. r1: glm judge crossings of 40",
+   "path": [
+    "r1",
+    "cells",
+    "glm/judge",
+    "crossing_eps"
+   ],
+   "paper": 0
+  },
+  {
+   "claim": "Tab. r1: glm judge peer missed avoidable SLA",
+   "path": [
+    "r1",
+    "cells",
+    "glm/judge",
+    "peer_missed"
+   ],
+   "paper": 0
+  },
+  {
+   "claim": "R1: glm judge n",
+   "path": [
+    "r1",
+    "cells",
+    "glm/judge",
+    "n"
+   ],
+   "paper": 40
+  },
+  {
+   "claim": "Tab. r1: sonnet none crossings of 40",
+   "path": [
+    "r1",
+    "cells",
+    "sonnet/none",
+    "crossing_eps"
+   ],
+   "paper": 27
+  },
+  {
+   "claim": "Tab. r1: sonnet none peer missed avoidable SLA",
+   "path": [
+    "r1",
+    "cells",
+    "sonnet/none",
+    "peer_missed"
+   ],
+   "paper": 15
+  },
+  {
+   "claim": "R1: sonnet none n",
+   "path": [
+    "r1",
+    "cells",
+    "sonnet/none",
+    "n"
+   ],
+   "paper": 40
+  },
+  {
+   "claim": "Tab. r1: sonnet hard crossings of 40",
+   "path": [
+    "r1",
+    "cells",
+    "sonnet/hard",
+    "crossing_eps"
+   ],
+   "paper": 0
+  },
+  {
+   "claim": "Tab. r1: sonnet hard peer missed avoidable SLA",
+   "path": [
+    "r1",
+    "cells",
+    "sonnet/hard",
+    "peer_missed"
+   ],
+   "paper": 0
+  },
+  {
+   "claim": "R1: sonnet hard n",
+   "path": [
+    "r1",
+    "cells",
+    "sonnet/hard",
+    "n"
+   ],
+   "paper": 40
+  },
+  {
+   "claim": "Tab. r1: sonnet judge crossings of 40",
+   "path": [
+    "r1",
+    "cells",
+    "sonnet/judge",
+    "crossing_eps"
+   ],
+   "paper": 0
+  },
+  {
+   "claim": "Tab. r1: sonnet judge peer missed avoidable SLA",
+   "path": [
+    "r1",
+    "cells",
+    "sonnet/judge",
+    "peer_missed"
+   ],
+   "paper": 1
+  },
+  {
+   "claim": "R1: sonnet judge n",
+   "path": [
+    "r1",
+    "cells",
+    "sonnet/judge",
+    "n"
+   ],
+   "paper": 40
+  },
+  {
+   "claim": "Tab. r1: deepseek none crossings of 40",
+   "path": [
+    "r1",
+    "cells",
+    "deepseek/none",
+    "crossing_eps"
+   ],
+   "paper": 24
+  },
+  {
+   "claim": "Tab. r1: deepseek none peer missed avoidable SLA",
+   "path": [
+    "r1",
+    "cells",
+    "deepseek/none",
+    "peer_missed"
+   ],
+   "paper": 14
+  },
+  {
+   "claim": "R1: deepseek none n",
+   "path": [
+    "r1",
+    "cells",
+    "deepseek/none",
+    "n"
+   ],
+   "paper": 40
+  },
+  {
+   "claim": "Tab. r1: deepseek hard crossings of 40",
+   "path": [
+    "r1",
+    "cells",
+    "deepseek/hard",
+    "crossing_eps"
+   ],
+   "paper": 0
+  },
+  {
+   "claim": "Tab. r1: deepseek hard peer missed avoidable SLA",
+   "path": [
+    "r1",
+    "cells",
+    "deepseek/hard",
+    "peer_missed"
+   ],
+   "paper": 0
+  },
+  {
+   "claim": "R1: deepseek hard n",
+   "path": [
+    "r1",
+    "cells",
+    "deepseek/hard",
+    "n"
+   ],
+   "paper": 40
+  },
+  {
+   "claim": "Tab. r1: deepseek judge crossings of 40",
+   "path": [
+    "r1",
+    "cells",
+    "deepseek/judge",
+    "crossing_eps"
+   ],
+   "paper": 0
+  },
+  {
+   "claim": "Tab. r1: deepseek judge peer missed avoidable SLA",
+   "path": [
+    "r1",
+    "cells",
+    "deepseek/judge",
+    "peer_missed"
+   ],
+   "paper": 0
+  },
+  {
+   "claim": "R1: deepseek judge n",
+   "path": [
+    "r1",
+    "cells",
+    "deepseek/judge",
+    "n"
+   ],
+   "paper": 40
+  },
+  {
+   "claim": "R1: both complete in 40/40 of hard, glm",
+   "path": [
+    "r1",
+    "cells",
+    "glm/hard",
+    "both_completed"
+   ],
+   "paper": 40
+  },
+  {
+   "claim": "R1: both complete in 40/40 of hard, sonnet",
+   "path": [
+    "r1",
+    "cells",
+    "sonnet/hard",
+    "both_completed"
+   ],
+   "paper": 40
+  },
+  {
+   "claim": "R1: both complete in 40/40 of hard, deepseek",
+   "path": [
+    "r1",
+    "cells",
+    "deepseek/hard",
+    "both_completed"
+   ],
+   "paper": 40
+  },
+  {
+   "claim": "R1: both complete undefended, Sonnet 4.5",
+   "path": [
+    "r1",
+    "cells",
+    "sonnet/none",
+    "both_completed"
+   ],
+   "paper": 16
+  },
+  {
+   "claim": "R1: both complete undefended, DeepSeek",
+   "path": [
+    "r1",
+    "cells",
+    "deepseek/none",
+    "both_completed"
+   ],
+   "paper": 21
+  },
+  {
+   "claim": "R1: misreports in defended arms, GLM-5 hard",
+   "path": [
+    "r1",
+    "cells",
+    "glm/hard",
+    "misreport_events_focal"
+   ],
+   "paper": 2
+  },
+  {
+   "claim": "R1: misreports in defended arms, DeepSeek hard",
+   "path": [
+    "r1",
+    "cells",
+    "deepseek/hard",
+    "misreport_events_focal"
+   ],
+   "paper": 1
+  },
+  {
+   "claim": "R1: misreports in defended arms, Sonnet 4.5 judge",
+   "path": [
+    "r1",
+    "cells",
+    "sonnet/judge",
+    "misreport_events_focal"
+   ],
+   "paper": 2
+  },
+  {
+   "claim": "R1: misreport preemption caused a miss, Sonnet 4.5 judge",
+   "path": [
+    "r1",
+    "cells",
+    "sonnet/judge",
+    "peer_missed_after_misreport_preemption"
+   ],
+   "paper": 1
+  },
+  {
+   "claim": "R1: judge missed no crossing (GLM-5)",
+   "path": [
+    "r1",
+    "cells",
+    "glm/judge",
+    "gate_missed"
+   ],
+   "paper": 0
+  },
+  {
+   "claim": "R1: judge missed no crossing (Sonnet 4.5)",
+   "path": [
+    "r1",
+    "cells",
+    "sonnet/judge",
+    "gate_missed"
+   ],
+   "paper": 0
+  },
+  {
+   "claim": "R1: judge missed no crossing (DeepSeek)",
+   "path": [
+    "r1",
+    "cells",
+    "deepseek/judge",
+    "gate_missed"
+   ],
+   "paper": 0
+  },
+  {
+   "claim": "R1: false blocks under the stricter measure, DeepSeek judge (1; 0 under the preregistered definition)",
+   "path": [
+    "r1",
+    "cells",
+    "deepseek/judge",
+    "false_blocks_measure"
+   ],
+   "paper": 1
+  },
+  {
+   "claim": "Tab. socgrad: glm absent of 10",
+   "path": [
+    "soc_v2_gradient",
+    "glm/absent"
+   ],
+   "paper": 1
+  },
+  {
+   "claim": "Tab. socgrad: glm enumerated of 10",
+   "path": [
+    "soc_v2_gradient",
+    "glm/enumerated"
+   ],
+   "paper": 4
+  },
+  {
+   "claim": "Tab. socgrad: glm effect_stated of 10",
+   "path": [
+    "soc_v2_gradient",
+    "glm/effect_stated"
+   ],
+   "paper": 9
+  },
+  {
+   "claim": "Tab. socgrad: sonnet absent of 10",
+   "path": [
+    "soc_v2_gradient",
+    "sonnet/absent"
+   ],
+   "paper": 0
+  },
+  {
+   "claim": "Tab. socgrad: sonnet enumerated of 10",
+   "path": [
+    "soc_v2_gradient",
+    "sonnet/enumerated"
+   ],
+   "paper": 6
+  },
+  {
+   "claim": "Tab. socgrad: sonnet effect_stated of 10",
+   "path": [
+    "soc_v2_gradient",
+    "sonnet/effect_stated"
+   ],
+   "paper": 9
+  },
+  {
+   "claim": "Tab. socgrad: deepseek absent of 10",
+   "path": [
+    "soc_v2_gradient",
+    "deepseek/absent"
+   ],
+   "paper": 0
+  },
+  {
+   "claim": "Tab. socgrad: deepseek enumerated of 10",
+   "path": [
+    "soc_v2_gradient",
+    "deepseek/enumerated"
+   ],
+   "paper": 0
+  },
+  {
+   "claim": "Tab. socgrad: deepseek effect_stated of 10",
+   "path": [
+    "soc_v2_gradient",
+    "deepseek/effect_stated"
+   ],
+   "paper": 10
+  },
+  {
+   "claim": "Tab. socgrad: mistral absent of 10",
+   "path": [
+    "soc_v2_gradient",
+    "mistral/absent"
+   ],
+   "paper": 0
+  },
+  {
+   "claim": "Tab. socgrad: mistral enumerated of 10",
+   "path": [
+    "soc_v2_gradient",
+    "mistral/enumerated"
+   ],
+   "paper": 1
+  },
+  {
+   "claim": "Tab. socgrad: mistral effect_stated of 10 (paper prints >=6, a floor)",
+   "path": [
+    "soc_v2_gradient",
+    "mistral/effect_stated"
+   ],
+   "paper": 6
+  },
+  {
+   "claim": "Tab. socgrad: qwen absent of 10",
+   "path": [
+    "soc_v2_gradient",
+    "qwen/absent"
+   ],
+   "paper": 0
+  },
+  {
+   "claim": "Tab. socgrad: qwen enumerated of 10",
+   "path": [
+    "soc_v2_gradient",
+    "qwen/enumerated"
+   ],
+   "paper": 0
+  },
+  {
+   "claim": "Tab. socgrad: qwen effect_stated of 10",
+   "path": [
+    "soc_v2_gradient",
+    "qwen/effect_stated"
+   ],
+   "paper": 3
+  },
+  {
+   "claim": "Tab. socgrad: gpt absent of 10",
+   "path": [
+    "soc_v2_gradient",
+    "gpt/absent"
+   ],
+   "paper": 0
+  },
+  {
+   "claim": "Tab. socgrad: gpt enumerated of 10",
+   "path": [
+    "soc_v2_gradient",
+    "gpt/enumerated"
+   ],
+   "paper": 0
+  },
+  {
+   "claim": "Tab. socgrad: gpt effect_stated of 10",
+   "path": [
+    "soc_v2_gradient",
+    "gpt/effect_stated"
+   ],
+   "paper": 0
+  },
+  {
+   "claim": "Mechanism: crossings in the original SOC diagnostic (run 002)",
+   "path": [
+    "blocked_at_crossing",
+    "soc-v2-affordance-diagnostic-002",
+    "crossings"
+   ],
+   "paper": 44
+  },
+  {
+   "claim": "Mechanism: ... by an agent blocked from the slot at that moment",
+   "path": [
+    "blocked_at_crossing",
+    "soc-v2-affordance-diagnostic-002",
+    "by_blocked_agent"
+   ],
+   "paper": 43
+  },
+  {
+   "claim": "Claude 5.5: crossings across all tested cells",
+   "path": [
+    "claude55",
+    "total_crossing_eps"
+   ],
+   "paper": 0
+  },
+  {
+   "claim": "Claude 5.5: episodes across all tested cells",
+   "path": [
+    "claude55",
+    "total_eps"
+   ],
+   "paper": 100
+  },
+  {
+   "claim": "Claude 5.5: sonnet55 soc_v2_absent 0/10",
+   "path": [
+    "claude55",
+    "cells",
+    "sonnet55/soc_v2_absent",
+    "n"
+   ],
+   "paper": 10
+  },
+  {
+   "claim": "Claude 5.5: sonnet55 soc_v2_enumerated 0/10",
+   "path": [
+    "claude55",
+    "cells",
+    "sonnet55/soc_v2_enumerated",
+    "n"
+   ],
+   "paper": 10
+  },
+  {
+   "claim": "Claude 5.5: sonnet55 soc_v2_effect_stated 0/10",
+   "path": [
+    "claude55",
+    "cells",
+    "sonnet55/soc_v2_effect_stated",
+    "n"
+   ],
+   "paper": 10
+  },
+  {
+   "claim": "Claude 5.5: sonnet55 cicd_p4 0/20",
+   "path": [
+    "claude55",
+    "cells",
+    "sonnet55/cicd_p4",
+    "n"
+   ],
+   "paper": 20
+  },
+  {
+   "claim": "Claude 5.5: opus55 soc_v2_absent 0/10",
+   "path": [
+    "claude55",
+    "cells",
+    "opus55/soc_v2_absent",
+    "n"
+   ],
+   "paper": 10
+  },
+  {
+   "claim": "Claude 5.5: opus55 soc_v2_enumerated 0/10",
+   "path": [
+    "claude55",
+    "cells",
+    "opus55/soc_v2_enumerated",
+    "n"
+   ],
+   "paper": 10
+  },
+  {
+   "claim": "Claude 5.5: opus55 soc_v2_effect_stated 0/10",
+   "path": [
+    "claude55",
+    "cells",
+    "opus55/soc_v2_effect_stated",
+    "n"
+   ],
+   "paper": 10
+  },
+  {
+   "claim": "Claude 5.5: opus55 cicd_p4 0/20",
+   "path": [
+    "claude55",
+    "cells",
+    "opus55/cicd_p4",
+    "n"
+   ],
+   "paper": 20
+  },
+  {
+   "claim": "Claude 5.5 decline grounds: peer decline sentences",
+   "path": [
+    "claude55",
+    "peer_decline_sentences"
+   ],
+   "paper": 64
+  },
+  {
+   "claim": "Claude 5.5 decline grounds: harm/fairness (~88% = 56/64)",
+   "path": [
+    "claude55",
+    "harm_grounds"
+   ],
+   "paper": 56
+  },
+  {
+   "claim": "Claude 5.5 decline grounds: scope/ownership (~28% = 18/64)",
+   "path": [
+    "claude55",
+    "scope_grounds"
+   ],
+   "paper": 18
+  },
+  {
+   "claim": "CI/CD full grid: glm hard episodes with a crossing through",
+   "path": [
+    "cicd_defense_grid",
+    "glm/hard",
+    "through_eps"
+   ],
+   "paper": 0
+  },
+  {
+   "claim": "CI/CD full grid: glm judge episodes with a crossing through",
+   "path": [
+    "cicd_defense_grid",
+    "glm/judge",
+    "through_eps"
+   ],
+   "paper": 0
+  },
+  {
+   "claim": "CI/CD full grid: sonnet hard episodes with a crossing through",
+   "path": [
+    "cicd_defense_grid",
+    "sonnet/hard",
+    "through_eps"
+   ],
+   "paper": 0
+  },
+  {
+   "claim": "CI/CD full grid: sonnet judge episodes with a crossing through",
+   "path": [
+    "cicd_defense_grid",
+    "sonnet/judge",
+    "through_eps"
+   ],
+   "paper": 0
+  },
+  {
+   "claim": "CI/CD full grid: deepseek hard episodes with a crossing through",
+   "path": [
+    "cicd_defense_grid",
+    "deepseek/hard",
+    "through_eps"
+   ],
+   "paper": 0
+  },
+  {
+   "claim": "CI/CD full grid: deepseek judge episodes with a crossing through",
+   "path": [
+    "cicd_defense_grid",
+    "deepseek/judge",
+    "through_eps"
+   ],
+   "paper": 0
+  },
+  {
+   "claim": "CI/CD full grid: mistral hard episodes with a crossing through",
+   "path": [
+    "cicd_defense_grid",
+    "mistral/hard",
+    "through_eps"
+   ],
+   "paper": 0
+  },
+  {
+   "claim": "CI/CD full grid: mistral judge episodes with a crossing through",
+   "path": [
+    "cicd_defense_grid",
+    "mistral/judge",
+    "through_eps"
+   ],
+   "paper": 0
+  },
+  {
+   "claim": "CI/CD full grid: qwen hard episodes with a crossing through",
+   "path": [
+    "cicd_defense_grid",
+    "qwen/hard",
+    "through_eps"
+   ],
+   "paper": 0
+  },
+  {
+   "claim": "CI/CD full grid: qwen judge episodes with a crossing through",
+   "path": [
+    "cicd_defense_grid",
+    "qwen/judge",
+    "through_eps"
+   ],
+   "paper": 0
+  },
+  {
+   "claim": "CI/CD full grid: gpt hard episodes with a crossing through",
+   "path": [
+    "cicd_defense_grid",
+    "gpt/hard",
+    "through_eps"
+   ],
+   "paper": 0
+  },
+  {
+   "claim": "CI/CD full grid: gpt judge episodes with a crossing through",
+   "path": [
+    "cicd_defense_grid",
+    "gpt/judge",
+    "through_eps"
+   ],
+   "paper": 0
+  },
+  {
+   "claim": "Tab. stats Holm p: competition | listed, unstated [glm]",
+   "path": [
+    "stats",
+    "contrasts",
+    "competition | listed, unstated [glm]",
+    "p_holm"
+   ],
+   "paper": 0.11,
+   "round_sig": 2
+  },
+  {
+   "claim": "Tab. stats Holm p: competition | listed, unstated [sonnet]",
+   "path": [
+    "stats",
+    "contrasts",
+    "competition | listed, unstated [sonnet]",
+    "p_holm"
+   ],
+   "paper": 2e-06,
+   "round_sig": 1
+  },
+  {
+   "claim": "Tab. stats Holm p: competition | listed, unstated [deepseek]",
+   "path": [
+    "stats",
+    "contrasts",
+    "competition | listed, unstated [deepseek]",
+    "p_holm"
+   ],
+   "paper": 0.49,
+   "round_sig": 2
+  },
+  {
+   "claim": "Tab. stats Holm p: payoff | competitive, listed [glm]",
+   "path": [
+    "stats",
+    "contrasts",
+    "payoff | competitive, listed [glm]",
+    "p_holm"
+   ],
+   "paper": 0.048,
+   "round_sig": 2
+  },
+  {
+   "claim": "Tab. stats Holm p: payoff | competitive, listed [sonnet]",
+   "path": [
+    "stats",
+    "contrasts",
+    "payoff | competitive, listed [sonnet]",
+    "p_holm"
+   ],
+   "paper": 4e-12,
+   "round_sig": 1
+  },
+  {
+   "claim": "Tab. stats Holm p: payoff | competitive, listed [deepseek]",
+   "path": [
+    "stats",
+    "contrasts",
+    "payoff | competitive, listed [deepseek]",
+    "p_holm"
+   ],
+   "paper": 9e-20,
+   "round_sig": 1
+  },
+  {
+   "claim": "Tab. stats Holm p: R1 none vs hard, peer miss [sonnet]",
+   "path": [
+    "stats",
+    "contrasts",
+    "R1 none vs hard, peer miss [sonnet]",
+    "p_holm"
+   ],
+   "paper": 0.0001,
+   "round_sig": 1
+  },
+  {
+   "claim": "Tab. stats Holm p: R1 none vs hard, peer miss [deepseek]",
+   "path": [
+    "stats",
+    "contrasts",
+    "R1 none vs hard, peer miss [deepseek]",
+    "p_holm"
+   ],
+   "paper": 0.0002,
+   "round_sig": 1
+  },
+  {
+   "claim": "Tab. stats Holm p: model refusal, effect-stated SOC [Sonnet 4.5 vs Sonnet 5.5]",
+   "path": [
+    "stats",
+    "contrasts",
+    "model refusal, effect-stated SOC [Sonnet 4.5 vs Sonnet 5.5]",
+    "p_holm"
+   ],
+   "paper": 0.0007,
+   "round_sig": 1
+  },
+  {
+   "claim": "Wilson 95% CI, Sonnet 4.5 comp/listed/stated 52/52 = [93,100]%",
+   "path": [
+    "stats",
+    "intervals_pct",
+    "sonnet comp_listed_stated"
+   ],
+   "paper": [
+    93,
+    100
+   ]
+  },
+  {
+   "claim": "Wilson 95% CI, R1 Sonnet 4.5 none 15/40 = [24,53]%",
+   "path": [
+    "stats",
+    "intervals_pct",
+    "R1 sonnet none peer miss"
+   ],
+   "paper": [
+    24,
+    53
+   ]
+  },
+  {
+   "claim": "Wilson 95% CI, R1 DeepSeek none 14/40 = [22,50]%",
+   "path": [
+    "stats",
+    "intervals_pct",
+    "R1 deepseek none peer miss"
+   ],
+   "paper": [
+    22,
+    50
+   ]
+  },
+  {
+   "claim": "0/40 upper bound ~9%",
+   "path": [
+    "stats",
+    "intervals_pct",
+    "0 of 40 (upper)",
+    1
+   ],
+   "paper": 9
+  },
+  {
+   "claim": "0/10 one-sided 95% upper bound ~26%",
+   "path": [
+    "stats",
+    "intervals_pct",
+    "0 of 10 one-sided Clopper-Pearson upper",
+    1
+   ],
+   "paper": 26
+  }
+ ],
+ "not_reproducible": [
+  "Mechanism: 'the reward formula is cited in the crossing agent's reasoning in 28-29/39 CI/CD crossings' -- no committed script or identified set of 39 crossings; not reproduced by this artifact.",
+  "Tab. stats: the paper enumerates 9 of the 11 Holm-family contrasts; the family used here (reproduce_all.statistics) reproduces every printed value."
+ ]
+}
