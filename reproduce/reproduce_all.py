@@ -14,6 +14,7 @@ Steps (each prints a section; everything is written to reproduce/out/):
        R1 repaired-SOC defense        scripts/revision_measures.py r1
        SOC-v2 diagnostic gradient     scripts/soc_v2_episode_rescore.py
        crossing agent blocked?        slot-state replay (this file)
+       CI/CD crossings citing reward  scripts/cicd_formula_citation.py
        Claude 5.5 crossings, grounds  logs + scripts/recent_claude_refusal_audit.py
        CI/CD full-grid defense        scripts/defense_002_measures.py
   3. STATISTICS. Wilson 95% intervals and two-sided Fisher exact tests,
@@ -204,6 +205,21 @@ def claude55() -> dict[str, Any]:
             "scope_grounds": sum(s["scope"] for s in sentences)}
 
 
+def cicd_formula_citation() -> dict[str, Any]:
+    """Mechanism: of every CI/CD crossing in the shipped runs, how many cite
+    the reward formula or relative-standing arithmetic in the crossing agent's
+    reasoning for that turn (rule and tiers: scripts/cicd_formula_citation.py)."""
+    import cicd_formula_citation as cf
+    eps = cf.episodes_under([RUNS / r for r in ("r2-affordance-factorial-001", "defense-001",
+                                                "defense-002", "recent-claude-matched-001")])
+    rows = [c for ep in eps for c in cf.crossings(ep)]
+    summary = cf.summarize(rows)
+    short = {"zai.glm-5": "glm", "us.anthropic.claude-sonnet-4-5-20250929-v1:0": "sonnet",
+             "deepseek.v3.2": "deepseek", "mistral.mistral-large-3-675b-instruct": "mistral"}
+    summary["by_model"] = {short.get(k, k): v for k, v in summary["by_model"].items()}
+    return summary
+
+
 def cicd_defense_grid() -> dict[str, Any]:
     import defense_002_measures as dm
     rows = [dm.measure(*args) for args in dm.episodes() if args[0] == "cicd"]
@@ -385,6 +401,11 @@ def main() -> int:
     results["blocked_at_crossing"] = blocked_at_crossing()
     print("  Claude 5.5 crossings and decline grounds ...", flush=True)
     results["claude55"] = claude55()
+    print("  CI/CD crossings citing the reward formula ...", flush=True)
+    results["cicd_formula_citation"] = cicd_formula_citation()
+    t = results["cicd_formula_citation"]["total"]
+    print(f"    {t['cites']}/{t['crossings']} cite the formula or relative standing; "
+          f"{t['expression']}/{t['crossings']} write out the competitive arithmetic")
     print("  CI/CD full-grid defense ...", flush=True)
     results["cicd_defense_grid"] = cicd_defense_grid()
     section("3. statistics")

@@ -1524,10 +1524,86 @@
     1
    ],
    "paper": 26
+  },
+  {
+   "claim": "Mechanism (CI/CD): crossings in the shipped CI/CD runs (R2 + defense-001/002)",
+   "path": [
+    "cicd_formula_citation",
+    "total",
+    "crossings"
+   ],
+   "paper": 396
+  },
+  {
+   "claim": "Mechanism (CI/CD): crossings citing the reward formula or relative standing (was printed as 28-29/39; re-derived)",
+   "path": [
+    "cicd_formula_citation",
+    "total",
+    "cites"
+   ],
+   "paper": 347
+  },
+  {
+   "claim": "Mechanism (CI/CD): crossings writing out the competitive arithmetic (strict tier)",
+   "path": [
+    "cicd_formula_citation",
+    "total",
+    "expression"
+   ],
+   "paper": 196
+  },
+  {
+   "claim": "Mechanism (CI/CD): crossing turns with empty text",
+   "path": [
+    "cicd_formula_citation",
+    "total",
+    "empty_text"
+   ],
+   "paper": 0
+  },
+  {
+   "claim": "Mechanism (CI/CD): GLM-5 cites",
+   "path": [
+    "cicd_formula_citation",
+    "by_model",
+    "glm",
+    "cites"
+   ],
+   "paper": 47
+  },
+  {
+   "claim": "Mechanism (CI/CD): Sonnet 4.5 cites",
+   "path": [
+    "cicd_formula_citation",
+    "by_model",
+    "sonnet",
+    "cites"
+   ],
+   "paper": 186
+  },
+  {
+   "claim": "Mechanism (CI/CD): DeepSeek cites",
+   "path": [
+    "cicd_formula_citation",
+    "by_model",
+    "deepseek",
+    "cites"
+   ],
+   "paper": 113
+  },
+  {
+   "claim": "Mechanism (CI/CD): competitive-reward crossings citing",
+   "path": [
+    "cicd_formula_citation",
+    "by_incentive",
+    "competitive",
+    "cites"
+   ],
+   "paper": 341
   }
  ],
  "not_reproducible": [
-  "Mechanism: 'the reward formula is cited in the crossing agent's reasoning in 28-29/39 CI/CD crossings' -- no committed script or identified set of 39 crossings; not reproduced by this artifact.",
+  "Mechanism (CI/CD): the paper's earlier '28-29/39' had no script and no identifiable crossing set; it is superseded by the re-derived count checked above (scripts/cicd_formula_citation.py). The paper text must print the re-derived value for this check to describe it.",
   "Tab. stats: the paper enumerates 9 of the 11 Holm-family contrasts; the family used here (reproduce_all.statistics) reproduces every printed value."
  ]
 }
