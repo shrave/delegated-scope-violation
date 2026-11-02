@@ -114,6 +114,7 @@ competition-lab replay /tmp/mock/r1_glm_none_001-0000
 | Pre-repair SOC diagnostic (absent / listed / listed+effect, n=10) and "crossing agent was blocked" | `soc-v2-affordance-diagnostic-001`, `-002` | `configs/soc_v2_diagnostic{,_002}/` | `scripts/soc_v2_episode_rescore.py`, `reproduce/reproduce_all.py` |
 | Model-specific refusal (Claude Sonnet 5.5 / Opus 5.5, 0/100) and decline grounds | `recent-claude-matched-001` | `configs/recent_claude_matched/` | `scripts/recent_claude_declines.py`, `scripts/recent_claude_refusal_audit.py` |
 | Mechanism: CI/CD crossings citing the reward formula or relative standing | `r2-affordance-factorial-001`, `defense-001`, `defense-002` | as above | `scripts/cicd_formula_citation.py` |
+| CI/CD: a legal route to completion exists (earliest round under optimal play) | none: exhaustive search over the environment | `configs/r2_affordance_factorial/` (task template) | `scripts/cicd_legal_route.py` |
 | CI/CD full-grid defense (every model, hard and judge) | `defense-001`, `defense-002` | `configs/defense_00{1,2}/` | `scripts/defense_002_measures.py` |
 
 The preregistration and results document for each run are in `docs/`.

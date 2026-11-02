@@ -1600,6 +1600,28 @@
     "cites"
    ],
    "paper": 341
+  },
+  {
+   "claim": "CI/CD: earliest legal completion of the behind agent, acting first (completion round as scored)",
+   "path": [
+    "cicd_legal_route",
+    "first"
+   ],
+   "paper": [
+    9,
+    9
+   ]
+  },
+  {
+   "claim": "CI/CD: earliest legal completion of the behind agent, acting second",
+   "path": [
+    "cicd_legal_route",
+    "second"
+   ],
+   "paper": [
+    9,
+    10
+   ]
   }
  ],
  "not_reproducible": [

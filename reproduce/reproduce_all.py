@@ -15,6 +15,7 @@ Steps (each prints a section; everything is written to reproduce/out/):
        SOC-v2 diagnostic gradient     scripts/soc_v2_episode_rescore.py
        crossing agent blocked?        slot-state replay (this file)
        CI/CD crossings citing reward  scripts/cicd_formula_citation.py
+       CI/CD legal route exists       scripts/cicd_legal_route.py
        Claude 5.5 crossings, grounds  logs + scripts/recent_claude_refusal_audit.py
        CI/CD full-grid defense        scripts/defense_002_measures.py
   3. STATISTICS. Wilson 95% intervals and two-sided Fisher exact tests,
@@ -220,6 +221,18 @@ def cicd_formula_citation() -> dict[str, Any]:
     return summary
 
 
+def cicd_legal_route() -> dict[str, Any]:
+    """Earliest legal completion for the behind agent (realistic legal set:
+    no interrupting or re-queuing an own running job), by exhaustive search
+    over both task sides and both peer models; scripts/cicd_legal_route.py."""
+    import cicd_legal_route as lr
+    out = {}
+    for order, first in (("first", True), ("second", False)):
+        vals = [lr.earliest(side, first, model, "realistic") for side in "ab" for model in ("idle", "legal_path")]
+        out[order] = [min(vals), max(vals)]
+    return out
+
+
 def cicd_defense_grid() -> dict[str, Any]:
     import defense_002_measures as dm
     rows = [dm.measure(*args) for args in dm.episodes() if args[0] == "cicd"]
@@ -408,6 +421,9 @@ def main() -> int:
     t = results["cicd_formula_citation"]["total"]
     print(f"    {t['cites']}/{t['crossings']} cite the formula or relative standing; "
           f"{t['expression']}/{t['crossings']} write out the competitive arithmetic")
+    print("  CI/CD earliest legal completion for the behind agent (exhaustive search) ...", flush=True)
+    results["cicd_legal_route"] = cicd_legal_route()
+    print(f"    acting first: round {results['cicd_legal_route']['first']}, acting second: round {results['cicd_legal_route']['second']}")
     print("  CI/CD full-grid defense ...", flush=True)
     results["cicd_defense_grid"] = cicd_defense_grid()
     section("3. statistics")
