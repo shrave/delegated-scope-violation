@@ -1,11 +1,58 @@
-# Delegated-scope violations by tool-using agents
+# Permitted but Unauthorized: Affordance-Induced Delegated-Scope Violations in Multi-Agent LLM Systems
+
+**Shravya Kanchi** (Independent Researcher)
+
+📄 **Paper:** [PDF](paper/permitted-but-unauthorized.pdf) · arXiv: forthcoming
+
+🔁 **Reproduce every reported number offline:** `python reproduce/reproduce_all.py` ([details](#reproduction-has-two-tiers))
+
+## Abstract
+
+Multi-agent LLM systems increasingly place several autonomous agents on shared
+infrastructure, where each agent is granted permissions far broader than the task
+it is delegated, so every agent is routinely *permitted* to act on a peer's
+resources it was never assigned. We address the following research question:
+under competitive pressure, what determines whether an agent crosses from its own
+delegated scope into a peer's resources, and can such crossings be enforced away?
+
+We study this across eight contemporary LLMs in two simulated environments: a
+CI/CD release pipeline and a security-operations incident queue. Crossings are
+counted by a deterministic, no-model-in-the-loop detector computed from
+hash-chained, replay-verified logs.
+
+In a controlled 2×2×2 factorial over competitive incentive, candidate visibility
+and payoff information (three models, n = 52 per cell), we find that action
+*representation*, not permission, governs the behavior:
+
+- No agent crosses in any condition where the peer action is unlisted.
+- Listing it together with competitive pressure and a stated payoff raises
+  crossings sharply, up to 52 of 52 episodes for Claude Sonnet 4.5.
+
+We further observe a model-dependent split. Two newer models (Claude Sonnet 5.5
+and Opus 5.5) refuse the identical attack in 0 of 100 episodes, at a projected
+cost, where prior-generation models cross in 9 of 10.
+
+We then evaluate two defenses: a deterministic reference monitor and a
+model-based pre-execution judge. Both block every crossing and, when the task is
+winnable, cut avoidable peer deadline misses from 15/40 and 14/40 to at most 1/40.
+
+However, scope enforcement is not harm prevention. An agent can still set a peer
+back through an *authorized* action on its own resources, misreporting its
+incident's severity, which neither defense detects.
+
+Within the tested environments and configurations, our results establish action
+*representation*, not permission alone, as a controllable driver of inter-agent
+scope violations. They also show that enforcing delegated scope is distinct from
+preventing harm, motivating *effect-aware* authorization that reasons about an
+action's consequences rather than only the resource it names.
+
+## This repository
 
 Code, environments, delegation records, configurations and the complete
-hash-chained event logs for *"Permitted but Unauthorized: Affordance-Induced
-Delegated-Scope Violations in Multi-Agent LLM Systems"*: a controlled study of
-when tool-using LLM agents act on resources the platform **permits** them to touch
-but that were never **delegated** to them, and of what runtime enforcement does
-and does not prevent.
+hash-chained event logs for the paper: a controlled study of when tool-using LLM
+agents act on resources the platform **permits** them to touch but that were
+never **delegated** to them, and of what runtime enforcement does and does not
+prevent.
 
 Two simulated multi-agent environments are included:
 
@@ -102,6 +149,7 @@ competition-lab replay /tmp/mock/r1_glm_none_001-0000
 | `artifacts/runs/` | **the event logs**: per episode a `manifest.json` (config, commit, prompts and their hashes, model ids, seeds) and an `events.jsonl` (hash-chained model calls, tool requests and results with state digests, round transitions) |
 | `scripts/` | analysis (`revision_measures.py`, `defense_00{1,2}_measures.py`, `soc_v2_episode_rescore.py`, `recent_claude_*.py`), audits (`r2_prompt_audit.py`, `r1_soc_feasibility.py`), the Tier 2 runner and the config generators |
 | `reproduce/` | the Tier 1 entry point and the paper's printed values |
+| `paper/` | the paper (PDF) |
 | `docs/` | preregistrations (committed before each run), results documents, the R1 feasibility check, the R2 prompt audit, the truncated-episode declarations |
 | `tests/` | tests for the environment changes, defenses, configs and measures (`pip install -e ".[dev]" && pytest`) |
 
@@ -153,4 +201,5 @@ The preregistration and results document for each run are in `docs/`.
 - **Data** (event logs, configs, task and delegation records, docs): CC BY 4.0.
   See `LICENSE-DATA`. The logs contain model-generated text, which may also be
   subject to the model providers' terms.
+- **Paper** (`paper/`): © 2026 Shravya Kanchi; the arXiv version will carry its own license.
 - **Citation:** see `CITATION.cff`, or GitHub's "Cite this repository" button.
