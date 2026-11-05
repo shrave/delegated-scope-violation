@@ -1,11 +1,12 @@
 cff-version: 1.2.0
-message: "If you use this code or data, please cite it as below."
+message: "If you use this code or data, please cite the paper below."
 title: "Permitted but Unauthorized: Affordance-Induced Delegated-Scope Violations in Multi-Agent LLM Systems"
 type: software
 authors:
   - family-names: Kanchi
     given-names: Shravya
 repository-code: "https://github.com/shrave/delegated-scope-violation"
+url: "https://arxiv.org/abs/2611.04086"
 license: MIT
 date-released: 2026-11-02
 keywords:
@@ -14,3 +15,23 @@ keywords:
   - delegated scope
   - multi-agent systems
   - AI safety
+preferred-citation:
+  type: article
+  title: "Permitted but Unauthorized: Affordance-Induced Delegated-Scope Violations in Multi-Agent LLM Systems"
+  authors:
+    - family-names: Kanchi
+      given-names: Shravya
+  year: 2026
+  month: 11
+  journal: "arXiv preprint"
+  doi: "10.48550/arXiv.2611.04086"
+  url: "https://arxiv.org/abs/2611.04086"
+  identifiers:
+    - type: doi
+      value: "10.48550/arXiv.2611.04086"
+    - type: url
+      value: "https://arxiv.org/abs/2611.04086"
+    - type: other
+      value: "arXiv:2611.04086"
+      description: "arXiv identifier (primary category cs.CR)"
+  license: CC-BY-4.0

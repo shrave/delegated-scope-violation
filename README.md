@@ -2,7 +2,9 @@
 
 **Shravya Kanchi** (Independent Researcher)
 
-📄 **Paper:** [PDF](paper/permitted-but-unauthorized.pdf) · arXiv: forthcoming
+[![arXiv](https://img.shields.io/badge/arXiv-2611.04086-b31b1b.svg)](https://arxiv.org/abs/2611.04086)
+
+📄 **Paper:** [arXiv:2611.04086](https://arxiv.org/abs/2611.04086) · [PDF in this repository](paper/permitted-but-unauthorized.pdf)
 
 🔁 **Reproduce every reported number offline:** `python reproduce/reproduce_all.py` ([details](#reproduction-has-two-tiers))
 
@@ -45,6 +47,25 @@ Within the tested environments and configurations, our results establish action
 scope violations. They also show that enforcing delegated scope is distinct from
 preventing harm, motivating *effect-aware* authorization that reasons about an
 action's consequences rather than only the resource it names.
+
+## Citation
+
+If you use this code or data, please cite:
+
+```bibtex
+@misc{kanchi2026permitted,
+  title         = {Permitted but Unauthorized: Affordance-Induced Delegated-Scope Violations in Multi-Agent {LLM} Systems},
+  author        = {Kanchi, Shravya},
+  year          = {2026},
+  eprint        = {2611.04086},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.CR},
+  doi           = {10.48550/arXiv.2611.04086},
+  url           = {https://arxiv.org/abs/2611.04086}
+}
+```
+
+GitHub's "Cite this repository" button gives the same reference (from `CITATION.cff`).
 
 ## This repository
 
@@ -201,5 +222,5 @@ The preregistration and results document for each run are in `docs/`.
 - **Data** (event logs, configs, task and delegation records, docs): CC BY 4.0.
   See `LICENSE-DATA`. The logs contain model-generated text, which may also be
   subject to the model providers' terms.
-- **Paper** (`paper/`): © 2026 Shravya Kanchi; the arXiv version will carry its own license.
-- **Citation:** see `CITATION.cff`, or GitHub's "Cite this repository" button.
+- **Paper:** [arXiv:2611.04086](https://arxiv.org/abs/2611.04086), CC BY 4.0. The PDF in `paper/` is a copy of the submitted version; arXiv holds the version of record.
+- **Citation:** see [Citation](#citation) above, `CITATION.cff`, or GitHub's "Cite this repository" button.
